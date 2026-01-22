@@ -1,9 +1,6 @@
-import React from "react";
-import Tilt from "react-tilt";
-import { motion } from "framer-motion";
-
+import React, { useRef } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { styles } from "../styles";
-import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -16,18 +13,48 @@ const ProjectCard = ({
   image,
   source_code_link,
 }) => {
+  const cardRef = useRef(null);
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const springX = useSpring(x, { stiffness: 150, damping: 20 });
+  const springY = useSpring(y, { stiffness: 150, damping: 20 });
+
+  const rotateX = useTransform(springY, [-0.5, 0.5], [12, -12]);
+  const rotateY = useTransform(springX, [-0.5, 0.5], [-12, 12]);
+
+  const handleMouseMove = (e) => {
+    const rect = cardRef.current.getBoundingClientRect();
+
+    const posX = (e.clientX - rect.left) / rect.width - 0.5;
+    const posY = (e.clientY - rect.top) / rect.height - 0.5;
+
+    x.set(posX);
+    y.set(posY);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
+      <motion.div
+        ref={cardRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          rotateX,
+          rotateY,
+          transformStyle: "preserve-3d",
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div
           className="relative w-full h-[230px] cursor-pointer"
+          style={{ transform: "translateZ(30px)" }}
           onClick={() => window.open(source_code_link, "_blank")}
         >
           <img
@@ -37,13 +64,16 @@ const ProjectCard = ({
           />
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5" style={{ transform: "translateZ(25px)" }}>
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
+        <div
+          className="mt-4 flex flex-wrap gap-2"
+          style={{ transform: "translateZ(20px)" }}
+        >
+          {tags?.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
               className={`text-[14px] ${tag.color}`}
@@ -52,7 +82,7 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
+      </motion.div>
     </motion.div>
   );
 };
