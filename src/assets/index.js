@@ -22,6 +22,9 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 import meta from "./company/meta.png";
+import paysys from "./company/paysys.png";
+import riksof from "./company/riksof.png";
+import sudofy from "./company/sudofy.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
@@ -29,6 +32,9 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import PMS from "./PMS.png";
+import githubfinder from "./githubfinder.png";
+import magicgame from "./magicgame.png";
 
 export {
   logo,
@@ -59,4 +65,10 @@ export {
   carrent,
   jobit,
   tripguide,
+  paysys,
+  riksof,
+  sudofy,
+  PMS,
+  githubfinder,
+  magicgame,
 };

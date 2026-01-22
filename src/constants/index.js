@@ -23,6 +23,12 @@ import {
   jobit,
   tripguide,
   threejs,
+  paysys,
+  riksof,
+  sudofy,
+  PMS,
+  githubfinder,
+  magicgame,
 } from "../assets";
 
 export const navLinks = [
@@ -42,19 +48,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Frontend Development",
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
+    title: "Backend Integration",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Enterprise Web Applications",
+    icon: mobile,
+  },
+  {
+    title: "Fintech Solutions",
     icon: creator,
   },
 ];
@@ -116,55 +122,57 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Software Engineer",
+    company_name: "Paysys Labs",
+    icon: paysys, // replace with your Paysys icon
+    iconBg: "#1f2937",
+    date: "Jul 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and enhancing enterprise-grade fintech applications using React.js, focusing on performance, scalability, and maintainability.",
+      "Designed and implemented Product Management modules within OpenCMS for card and transaction management.",
+      "Built modules including channel management, transaction setup, audit logging, fee management, courier configuration, and inventory management, with full CRUD operations.",
+      "Worked closely with project managers using Jira to translate business requirements into technical solutions.",
+      "Collaborated with backend and DevOps teams to ensure secure integrations and smooth deployments.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Associate Software Engineer",
+    company_name: "Paysys Labs",
+    icon: paysys,
+    iconBg: "#374151",
+    date: "Apr 2023 - Jul 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Worked as a frontend-focused full-stack engineer using React.js, Node.js, Express.js, and SQL Server.",
+      "Developed UI components for back-office and customer-facing fintech applications.",
+      "Integrated payment systems with multiple gateways and core banking systems.",
+      "Created and maintained RESTful APIs for e-payment portals and performed API testing for stability.",
+      "Collaborated with DevOps teams for UAT and production deployments using Git-based workflows.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    title: "Trainee Developer",
+    company_name: "RIKSOF",
+    icon: riksof,
+    iconBg: "#111827",
+    date: "Feb 2023 - Mar 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Worked extensively with React.js to build intuitive and responsive user interfaces.",
+      "Identified and fixed bugs to improve application performance and stability.",
+      "Performed unit testing to ensure code quality and reliability.",
+      "Collaborated closely with senior engineers to understand requirements and implement effective solutions.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "Web Development Intern",
+    company_name: "Sudofy",
+    icon: sudofy,
+    iconBg: "#020617",
+    date: "Oct 2022 - Jan 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed React components from scratch based on provided UI designs.",
+      "Enhanced existing applications by adding new features and improving performance.",
+      "Built a doctor appointment web application with video consultation using WebRTC, Socket.io, and CORS.",
+      "Worked on bug fixing, feature enhancements, and module development based on client requirements.",
     ],
   },
 ];
@@ -198,67 +206,67 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Project Management System",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A web-based project management application that allows users to create, track, and manage projects and tasks efficiently. Designed to streamline workflows with structured task organization, status tracking, and a clean, intuitive user interface.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "frontend-architecture",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "ui-design",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: PMS,
+    source_code_link: "https://project-management-site.vercel.app/login",
   },
   {
-    name: "Job IT",
+    name: "GitHub Finder",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A frontend application that allows users to search GitHub profiles and view detailed information including repositories, followers, and activity. Built with API integration and optimized for fast search and responsive layout, with efficient state management and clear data presentation for a smooth user experience.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "rest-api",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "github-api",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: githubfinder,
+    source_code_link: "https://hassan5022.github.io/Github-Finder/",
   },
   {
-    name: "Trip Guide",
+    name: "Magic Memory Game",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "An interactive memory game consisting of 12 cards arranged in a 4x3 grid. Players flip cards to find matching pairs and aim to complete the game in the fewest possible turns, focusing on logic, state management, and smooth user interaction.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "state-management",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "interactive-ui",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: magicgame,
+    source_code_link: "https://react-magic-game.web.app/",
   },
 ];
 
